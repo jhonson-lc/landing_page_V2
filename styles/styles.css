@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap');
+:root {
+    --DarkViolet: hsl(256, 26%, 20%);
+    --GrayishBlue: hsl(216, 30%, 68%);
+    --VeryDarkViolet: hsl(270, 9%, 17%);
+    --DarkGrayishViolet: hsl(273, 4%, 51%);
+    --VeryLightGray: hsl(0, 0%, 98%);
+    Font: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+}
+
+body h1 {
+    font-family: 'DM Serif Display', serif;
+}
+
+.container {
+    width: 100%;
+}
+
+.hero {
+    height: 5rem;
+    margin: 0 auto;
+    padding: 0 10rem;
+    background: var(--VeryLightGray);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    list-style: none;
+}
+
+.navbar__items {
+    display: inline-block;
+    margin-left: 3rem;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--DarkGrayishViolet);
+    cursor: pointer;
+}
+
+.navbar__items:hover{
+    color:var(--DarkViolet)
+}
+
+.navbar__items--bold {
+    border: 0.2rem solid var(--DarkGrayishViolet);
+    padding: 0.5rem 2rem;
+    font-weight: 700;
+    color: var(--DarkViolet);
+}
+
+.contenido {
+    position: relative;
+    overflow: hidden;
+}
+
+.contenido::before {
+    content: "";
+    width: 100%;
+    height: 45rem;
+    background: url(../images/bg-pattern-intro-left-desktop.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 25rem;
+}
+
+.contenido::after {
+    content: " ";
+    width: 30%;
+    height: 45rem;
+    background: url(../images/bg-pattern-intro-right-desktop.svg);
+    background-repeat: no-repeat;
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    top: -5.5rem;
+}
+
+.section__1 {
+    background: var(--DarkViolet);
+    width: 100%;
+    height: calc(100vh - 5rem);
+}
+
+.section__1 img {
+    position: absolute;
+    top: 7rem;
+    right: 10rem;
+}
+
+.home {
+    position: absolute;
+    top: 7rem;
+    left: 10rem;
+    width: 37%;
+    height: 40%;
+    padding: 3rem 0;
+    color: white;
+}
+
+.lineahorizontal {
+    width: 10rem;
+    border-top: 2px solid white;
+    top: 0;
+    left: 0;
+}
+
+.home h1 {
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+}
+
+.home p {
+    margin: 2rem 0;
+    line-height: 1.5rem;
+}
+
+.home button {
+    width: 9rem;
+    background: transparent;
+    border: 0.2rem solid var(--DarkGrayishViolet);
+    padding: 0.5rem 1.8rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-family: 'Karla';
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.section__2 {
+    width: 75%;
+    position: relative;
+    margin: 10rem 10rem;
+    display: grid;
+    grid-template-areas: "title title title" "art1 art2 art3";
+}
+
+.lineahorizontal-2 {
+    width: 10rem;
+    border-top: 2px solid var(--DarkGrayishViolet);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.section__2 h1 {
+    font-size: 4.5rem;
+    font-weight: 300;
+    padding: 5rem 0;
+    grid-area: title;
+}
+
+.art1 {
+    grid-area: art1;
+    width: 22rem;
+}
+
+.art2 {
+    width: 22rem;
+    grid-area: art2;
+}
+
+.art3 {
+    width: 22rem;
+    grid-area: art3;
+}
+
+.section__2 h2 {
+    font-family: 'DM Serif Display', serif;
+    margin: 1.5rem 0 1rem;
+}
+
+.section__2 p {
+    color: var(--DarkGrayishViolet);
+}
+
+.section__3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--DarkViolet);
+    margin: 0 10rem 10rem;
+    padding: 80px;
+    position: relative;
+}
+
+.section__3::after{
+    content: '';
+    position: absolute;
+    width: 350px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-image: url(../images/bg-pattern-intro-right-desktop.svg);
+    background-repeat: no-repeat;
+    background-position:10px -45px;
+}
+
+.section__3 span{
+    color:white;
+    font-size: 48px;
+    max-width: 420px;
+    font-family: 'DM Serif Display', serif;
+}
+
+
+.section__3 button{
+    color:white;
+    font-family: 'Karla', sans-serif;
+    text-transform: uppercase;
+    height: min-content;
+    background-color:transparent;
+    border: 2px solid #fff;
+    padding: 6px 12px;
+    position: relative;
+    z-index: 111;
+}
